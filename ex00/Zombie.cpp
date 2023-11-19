@@ -3,7 +3,7 @@
 Zombie::Zombie(std::string name)
 {
 	this->_name = name;
-	std::cout << "Zombie " << this->_name << " spwaned" << std::endl;
+	std::cout << "Zombie " << this->_name << " has spwaned" << std::endl;
 }
 
 Zombie::~Zombie()

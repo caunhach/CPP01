@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
+int	main(void)
+{
+	Weapon	club;
+	club.setType("gun");
+	HumanA A(club, "Bob");
+	HumanB B("Peter");
+}

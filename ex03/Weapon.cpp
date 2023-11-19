@@ -10,4 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
 
+const std::string	&Weapon::getType(void)
+{
+	std::string	&type = this->_type;
+	return(this->_type);
+}
+
+void Weapon::setType(std::string type)
+{
+	this->_type = type;
+}

@@ -13,13 +13,14 @@
 #ifndef WEAPON_H
 # define WEAPON_H
 
+#include <iostream>
 #include <string>
 
 class Weapon {
 	private:
 		std::string	_type;
 	public:
-		std::string	&getType(void) const;
+		const std::string		&getType(void);
 		void		setType(std::string type);
 };
 

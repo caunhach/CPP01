@@ -12,6 +12,16 @@
 
 #include "Weapon.hpp"
 
+Weapon::Weapon(std::string type): _type(type)
+{
+	std::cout << "created Weapon and its type is " << type << std::endl;
+}
+
+Weapon::~Weapon(void)
+{
+	std::cout << "destroyed Weapon that is " << this->_type << std::endl;
+}
+
 const std::string	&Weapon::getType(void)
 {
 	std::string	&type = this->_type;

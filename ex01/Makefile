@@ -1,9 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: caunhach <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/19 15:48:21 by caunhach          #+#    #+#              #
+#    Updated: 2023/11/19 15:48:24 by caunhach         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombie
+NAME = hordezombie
 
 all: $(NAME)
 

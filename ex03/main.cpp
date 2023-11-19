@@ -18,5 +18,8 @@ int	main(void)
 	Weapon	club;
 	club.setType("gun");
 	HumanA A(club, "Bob");
+	A.attack();
 	HumanB B("Peter");
+	B.setWeapon(club);
+	B.attack();
 }

@@ -15,7 +15,7 @@ OBJS = $(SRCS:.cpp=.o)
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombie
+NAME = violence
 
 all: $(NAME)
 

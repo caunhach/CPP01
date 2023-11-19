@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-# define HUMANA_H
+#ifndef HUMANB_H
+# define HUMANB_H
 
 #include "Weapon.hpp"
 
@@ -23,6 +23,7 @@ class HumanB{
 		HumanB(std::string name);
 		~HumanB(void);
 		void	attack();
+		void	setWeapon(Weapon &weapon);
 };
 
 #endif

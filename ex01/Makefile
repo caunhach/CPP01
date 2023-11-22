@@ -12,6 +12,7 @@
 
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
+HDRS = Zombie.hpp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,7 +20,7 @@ NAME = hordezombie
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HDRS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:

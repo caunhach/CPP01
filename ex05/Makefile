@@ -12,6 +12,7 @@
 
 SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
+HDRS = Harl.hpp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,7 +20,7 @@ NAME = complain
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HDRS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:

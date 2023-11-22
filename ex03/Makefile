@@ -12,6 +12,7 @@
 
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJS = $(SRCS:.cpp=.o)
+HDRS = HumanA.hpp HumanB.hpp Weapon.hpp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,7 +20,7 @@ NAME = violence
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HDRS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:

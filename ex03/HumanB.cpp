@@ -12,7 +12,7 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): _name(name), _Weapon(NULL)
+HumanB::HumanB(const std::string& name): _name(name), _Weapon(NULL)
 {
 	std::cout << "created HumanB and named " << name << std::endl;
 }

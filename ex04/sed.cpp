@@ -25,7 +25,10 @@ int	sed::process()
 	if (sed::_check_infile())
 		return (1);
 	if (sed::_check_outfile())
+	{
+		this->_infile.close();
 		return (1);
+	}
 	std::string	line;
 	while (std::getline(this->_infile, line))
 	{

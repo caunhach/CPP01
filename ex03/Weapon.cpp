@@ -12,7 +12,7 @@
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type): _type(type)
+Weapon::Weapon(const std::string& type): _type(type)
 {
 	std::cout << "created Weapon and its type is " << type << std::endl;
 }

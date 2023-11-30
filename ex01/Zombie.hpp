@@ -21,7 +21,7 @@ class Zombie {
 		std::string	_name;
 		static int	_index;
 	public:
-		Zombie(std::string name);
+		Zombie(const std::string& name);
 		Zombie(void);
 		~Zombie(void);
 		void	announce(void);

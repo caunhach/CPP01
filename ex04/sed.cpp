@@ -22,28 +22,32 @@ sed::~sed()
 
 int	sed::process()
 {
+	if (_to_replace.empty() || _to_replace == _new_string)
+	{
+		std::cerr << "Error : Bad string arguments" << std::endl;
+		return (1);
+	}
 	if (sed::_check_infile())
 		return (1);
 	if (sed::_check_outfile())
-	{
-		this->_infile.close();
 		return (1);
-	}
 	std::string	line;
 	while (std::getline(this->_infile, line))
 	{
 		size_t	pos = 0;
+		std::string	out;
 		while ((pos = line.find(this->_to_replace, pos)) != std::string::npos)
 		{
-			line.erase(pos, _to_replace.size());
-			line.insert(pos, _new_string);
+			out = line.substr(0, pos);
+			out += _new_string;
+			out += line.substr(pos + _to_replace.size());
+			line = out;
+			pos += _new_string.size();
 		}
 		this->_outfile << line;
 		if (!this->_infile.eof())
 			this->_outfile << std::endl;
 	}
-	this->_infile.close();
-	this->_outfile.close();
 	return (0);
 }
 

@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	if (argc != 4 || !argv[2][0] || !argv[3][0])
+	if (argc != 4)
 	{
 		std::cerr << "arguments error" << std::endl;
 		return (1);
